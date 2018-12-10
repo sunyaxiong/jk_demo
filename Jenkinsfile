@@ -10,5 +10,13 @@ pipeline {
                 '''
             }
         }
+		stage('test') {
+            steps {
+                sh 'echo "Hello Test"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                '''
+            }
+        }
     }
 }
